@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // [] = to perform array destructuring
+        // {} = to perform object destructuring
+        //destructuring = extract values from arrays and objects and then assign them to variables in a convienient way
+        // let a = 1;
+        // let b = 2; 
+        // //before destructuring 
+        // console.log(a);
+        // console.log(b);
+
+        // [a,b] = [b,a];
+
+        // //after destructuring 
+        // console.log(a);
+        // console.log(b);
+
+        // destructuring can be used to swap values in arrays 
+        const colors = ["red","green","purple","yellow"];
+
+        // [colors[0],colors[3]] = [colors[3],colors[0]];
+        // console.log(colors);
+
+        // assign varibables to the array values 
+        const [firsColor,secondColor,...extraColors] = colors;
+        console.log(firsColor);
+        console.log(secondColor);
+        console.log(extraColors);
+
+        //example no 4
+        // const person1 = {
+        //     firstName : "rohan",
+        //     lastName : "dubey",
+        //     isStudent : true,
+        // }
+        // const person2 = {
+        //     firstName : "om",
+        //     lastName : "nagpure",
+        //     isStudent : true,
+        //     job : 'unemployed',
+        // }
+
+        // const {firstName,lastName,isStudent,job} = person1;
+        // console.log(firstName);
+        // console.log(lastName);
+        // console.log(isStudent);
+        // console.log(job);
+
+        //destructuring the objects using the function 
+            function displayPerson({firstName,lastName,age,isStudent,job="collector"}){
+                console.log(`name is: ${firstName} , lastname is: ${lastName}`);
+                console.log(`age is: ${age}`);
+                console.log(`isStudent is: ${isStudent}`);
+                console.log(`job is: ${job}`);
+            }
+        const person1 = {
+            firstName : "rohan",
+            lastName : "dubey",
+            age : 20,
+            isStudent : true,
+            
+        }
+        const person2 = {
+            firstName : "om",
+            lastName : "nagpure",
+            age : 20,
+            isStudent : true,
+            job : "unemployed",
+        }
+
+        displayPerson(person2);
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

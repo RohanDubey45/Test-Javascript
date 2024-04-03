@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // function outer(){
+
+        //     let msg = "hello world";
+
+        //     function inner(){
+        //         console.log(msg);
+        //     }
+        //     inner();
+        // }
+        
+        // outer();
+
+        // state maintainance 
+
+        // function createCounter(){
+
+        //     let count = 0;
+
+        //     function incrCount(){
+        //         count++;
+        //         console.log(`Increased count to ${count}`);
+        //     }
+        //     function getCount(){
+        //         return count;
+        //     }
+        //     return {incrCount,getCount};
+         
+
+        // }
+
+        // const counter = createCounter();
+        // counter.incrCount();
+        // counter.incrCount();
+        // counter.incrCount();
+        // console.log(counter.getCount());
+     
+        function Game(){
+            let score = 0;
+            function incrScore(points){
+                score += points;
+                console.log(`increased score is ${score}`);
+            }
+            function decrScore(points){
+                score -= points;
+                console.log(`decreased score is ${score}`);
+            }
+            function getScore(){
+                return score;
+            }
+            return {incrScore,decrScore,getScore};
+        }
+        const game = Game();
+        game.incrScore(5);
+        game.incrScore(6);
+        game.decrScore(3);
+        console.log(game.getScore());
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

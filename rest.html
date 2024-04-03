@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   // rest parameters = (...rest) allow a function work with a variable
+// number of arguments by bundling them into an array
+
+        // function openFridge(...foods){
+        //      console.log(foods); //array of elements
+        //     console.log(...foods); //single elements
+        // }
+
+    //     function openFridge(...foods){
+    //         return foods
+    //     }
+    //     const food1 = "bread";
+    //     const food2 = "cheese";
+    //     const food3 = "sauce";
+    //     const food4 = "jam";
+
+    //    const foods = openFridge(food1,food2,food3,food4);
+    //    console.log(foods);
+
+    function combineString(...strings){
+        return strings
+    }
+    let strings = combineString("Rohan","Narendra","Dubey");
+    console.log(strings);
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

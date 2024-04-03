@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="startTimer()">START</button>
+    <button onclick="clearTimer()">CLEAR</button>
+    <script>
+        let timeOut;
+
+        function startTimer(){
+            timeOut = setTimeout( ()=> window.alert("hello rohan the lion"), 3000 );
+            console.log("Started");
+        }
+
+        function clearTimer(){
+            clearTimeout(timeOut);
+            console.log("Clear");
+        }
+
+    </script>
+
+    
+</body>
+</html>
+<script>
+
+    // function hello(){
+    //     window.alert("hello rohan the lion");
+    // }
+    // setTimeout(hello,3000);
+
+    // for pro users 
+    // setTimeout(function(){window.alert("hello rohan the lion");},3000);
+
+    // arrow function
+    // setTimeout(()=> window.alert("hello rohan the lion"),3000);
+
+    // setTimeout(pass the function, and time 3000)
+    // clearTimeout(pass the function)
+
+</script>

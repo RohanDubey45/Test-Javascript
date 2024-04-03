@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // class Square{
+        //     constructor(width,height){
+        //         this.width = width;
+        //         this.height = height;
+        //     }
+
+        //     // setters are use write the content it is the writable part 
+        //     set width(newWidth){
+        //         if(newWidth > 0){
+        //             this._width = newWidth;
+        //         }
+        //         else{
+        //             console.error("Width must be positive..");
+        //         }
+        //     }
+
+        //     set height(newHeight){
+        //         if(newHeight > 0){
+        //             this._height = newHeight;
+        //         }
+        //         else{
+        //             console.error("Height must be positive");
+        //         }
+        //     }
+
+        //     //get is used to read the content you have set with the setters 
+        //     get width(){
+        //         return `${this._width.toFixed(1)}cm`;
+        //     }
+        //     get height(){
+        //         return `${this._height.toFixed(1)}cm`;
+        //     }
+        //     getArea(){
+        //         return `${(this._width * this._height).toFixed(1)} ^ cms`;
+        //     }
+        // }
+
+        // const sqr = new Square(5,6);
+        // console.log(sqr.width);
+        // console.log(sqr.height);
+
+        // console.log(sqr.getArea());
+
+
+        class Person{
+
+            constructor(firstName,lastName,age){
+                this.firstName = firstName;
+                this.lastName = lastName;
+                this.age = age;
+            }
+
+            set firstName(newfirstName){
+                if(typeof newfirstName === "string" && newfirstName.length > 0){
+                    this._firstName = newfirstName;
+                }
+                else{
+                    console.error("first name cannot be a number and a empty sting..");
+                }
+            }
+            set lastName(newlastName){
+                if(typeof newlastName === "string" && newlastName.length > 0){
+                    this._lastName = newlastName;
+                }
+                else{
+                    console.error("last name cannot be a number and a empty sting..");
+                }
+            }
+            set age(newAge){
+                if(typeof newAge === "number" && newAge >= 0){
+                    this._age = newAge;
+                }
+                else{
+                    console.error("Age cannot be 0 and negative");
+                }   
+            }
+
+            //getters to read data which i had set above
+            get firstName(){
+                return this._firstName;
+            }
+            get lastName(){
+                return this._lastName;
+            }
+            get age(){
+                return this._age;
+            }
+        }
+        const rohan = new Person("Rohan","Dubey",20);
+        console.log(rohan.firstName);
+        console.log(rohan.lastName);
+        console.log(rohan.age);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

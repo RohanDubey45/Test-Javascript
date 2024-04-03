@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS checked property</title>
+  <style>
+    body{
+        font-family: Verdana;
+        font-size: 2em;
+    }
+    #mybtn{
+        font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+    <input type="checkbox" id="mycb">
+     <label for="mycb">Subscribe</label><br><br>
+
+     <input type="radio" id="visabtn" name="card">
+     <label for="visabtn">Visa</label><br>
+
+     <input type="radio" id="masterbtn" name="card">
+     <label for="masterbtn">Master Card</label><br>
+     
+     <input type="radio" id="paypalbtn" name="card">
+     <label for="paypalbtn">Paypal</label><br><br>
+
+     <button id="mybtn" type="submit">submit</button>
+
+     <p id="subRes"></p>
+     <p id="cardRes"></p>
+
+    
+</body>
+</html>
+
+<script>
+
+    const mycb = document.getElementById("mycb");
+    const visabtn = document.getElementById("visabtn");
+    const masterbtn = document.getElementById("masterbtn");
+    const paypalbtn = document.getElementById("paypalbtn");
+    const mybtn = document.getElementById("mybtn");
+    const subRes = document.getElementById("subRes");
+    const cardRes = document.getElementById("cardRes");
+
+
+    mybtn.onclick = function(){
+        if(mycb.checked){
+            subRes.textContent = `you are subscribed to us`;
+        }
+        else{
+            subRes.textContent = `you are not subscribed to us`;
+        }
+
+        if(visabtn.checked){
+            cardRes.textContent = `you are using visa for payment`;
+        }
+        else if(masterbtn.checked){
+            cardRes.textContent = `you are using mastercard for payment`;
+        }
+        else if(paypalbtn.checked){
+            cardRes.textContent = `you are using paypal for payment`;
+        }
+        else{
+            cardRes.textContent = `None of the radio buttons are checked`;
+        }
+    }
+
+
+
+
+
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // == checks only value.. may be of whatever datatype it is 
+        // === Strictly checks value and datatype.. means both should be same..
+        // let age = '15';
+        // if(age === "15"){
+        //     console.log("Your age is equal");
+        // }
+        // else{
+        //     console.log("Your age is not equal");
+        // }
+
+        // if(age != '15'){
+        //     console.log("It is not equal");
+        // }
+        // else{
+        //     console.log("It is equal");
+        // }
+
+        // != checks if it is equal may of whatever datatype it is 
+        // !== Strictly checks value and datatype.. 
+
+        let loggedIn = false;
+        let username;
+        let password;
+
+        while(!loggedIn){
+            username = window.prompt("enter username: ");
+            password = window.prompt("enter password: ");
+
+            if(username === "dubeynrohan@gmail.com" && password === "12345678"){
+                loggedIn = true;
+                console.log("you are loggedin");
+            }
+            else{
+                console.log("invalid credentials...");
+            }
+        }
+
+    </script>
+</body>
+</html>

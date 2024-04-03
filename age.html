@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body{
+            font-family: Verdana;
+            font-size: 2em;
+        }
+        #mybtn{
+            font-size: 1em;
+        } */
+    </style>
+</head>
+<body>
+    <label>Enter age:</label>
+    <input type="text" id="myinp"><br><br>
+    <button id="mybtn">submit</button>
+    <p id="mypara"></p>
+
+</body>
+</html>
+<script>
+
+    const myinp = document.getElementById("myinp");
+    const mybtn = document.getElementById("mybtn");
+    const mypara = document.getElementById("mypara");
+
+    let age;
+
+    mybtn.onclick = function(){
+        //To fetch the value from the input use the below line
+        age = myinp.value;
+        age = Number(age);
+    if(age==0){
+        mypara.textContent = 'your age cannot be 0';
+    }
+    else if(age>=18){
+        mypara.textContent = 'you are eligible to enter this site';
+    }
+    else if(age>100){
+        mypara.textContent = 'you are very old to enter this site';
+    } 
+    else if(age<0){
+        mypara.textContent = 'your age cannot be negative';
+    }
+    else{
+        mypara.textContent = 'age is not valid';
+    }
+    }
+    
+</script>

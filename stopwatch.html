@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: hsla(0, 0%, 90%, 0.799);  
+        }
+        #myStp{
+            font-size: 4rem;
+            font-family: Arial,sans-serif;
+            color: hsl(0, 0%, 25%);
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            border: 5px solid ;
+            border-radius: 30px;
+            background-color: white;
+        }
+        #display{
+            font-size: 4rem;
+            font-family: monospace;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px;
+            margin-bottom: 20px;
+        }
+        #controls button{
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 25px 30px;
+            border: none;
+            border-radius: 10px;
+            margin: 10px;
+            min-width: 50px;
+            color: white;
+        }
+        #start{
+            background-color: hwb(58 16% 8%);
+        }
+        #start:hover{
+            background-color: hsla(69, 82%, 44%, 0.957);
+        }
+        #stop{
+            background-color: blue;
+        }
+        #stop:hover{
+            background-color: rgba(84, 13, 208, 0.92);
+        }
+        #reset{
+            background-color: hsl(354, 85%, 46%);
+        }
+        #reset:hover{
+            background-color:hsl(0, 100%, 50%);
+        }
+        
+    </style>
+
+</head>
+<body>
+    <h1 id="myStp">Stopwatch</h1>
+
+    <div id="container">
+
+        <div id="display">
+            00:00:00:00
+        </div>
+
+        <div id="controls">
+            <button id="start" onclick="start()">Start</button>
+            <button id="stop" onclick="reset()">Stop</button>
+            <button id="reset" onclick="stop()">Reset</button>
+        </div>
+
+    </div>
+
+    <script>
+
+    </script>
+</body>
+</html>

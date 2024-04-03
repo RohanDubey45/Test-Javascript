@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //filter our array with a new array using the condition in the function provided
+        // const numbers = [1,2,3,4,5,6,7];
+
+        // const even = numbers.filter(isEven);
+        // const odd = numbers.filter(isOdd);
+
+        // console.log(even);
+        // console.log(odd);
+
+        // function isEven(element){
+        //     return element % 2 === 0;
+        // }
+        // function isOdd(element){
+        //     return element % 2 !== 0;
+        // }
+
+        // const ages = [14,15,16,18,18,20,23,24];
+
+        // const Adult = ages.filter(isAdult);
+        // const Children = ages.filter(isChildren);
+
+        // console.log(Adult);
+        // console.log(Children);
+
+        // function isAdult(element){
+        //     return element >= 18;
+        // }
+        // function isChildren(element){
+        //     return element < 18;
+        // }
+
+
+        const fruits = ["apple","banana","chiku",
+                            "coconut","kiwi","grapes","seetafal","lemon","poemgranet","pineapple"];
+
+        const short = fruits.filter(toShortFruits);
+        const long = fruits.filter(toLongFruits);
+
+        console.log(short);
+        console.log(long);
+
+        function toShortFruits(element){
+            return element.length <= 6;
+        }
+        function toLongFruits(element){
+            return element.length > 6;
+        }
+
+
+
+
+    </script>
+</body>
+</html>
